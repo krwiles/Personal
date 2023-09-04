@@ -1,0 +1,382 @@
+<html>
+
+    <head>
+        <script>
+            function setFocus(control, focus) {
+                var ctrlid = control.id;
+                var ctrlvalue = control.value;
+                var divfocus = document.getElementById("div-focus-" + ctrlid);
+                var divvalue = document.getElementById("div-value-" + ctrlid);
+                if (focus) {
+                    divfocus.innerHTML = "Control ID=" + ctrlid;
+                    divvalue.innerHTML = "Control Value=" + ctrlvalue;
+                } else {
+                    divfocus.innerHTML = "";
+                    divvalue.innerHTML = "Control Value=" + ctrlvalue;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form>
+            <table border="1">
+                <tr>
+                    <th style="width:250px">Label</th>
+                    <th style="width:250px">Control</th>
+                    <th style="width:250px">ControlID</th>
+                    <th style="width:250px">ControlValue</th>
+                </tr>
+                <tr>
+                    <td><label for="inputbutton">Input Button Label:</label></td>
+                    <td><input type="button" id="inputbutton" name="inputbutton" value="inputbutton" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);" onclick="alert('clicked')"></td>
+                    <td>
+                        <div id="div-focus-inputbutton"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputbutton"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputcheckbox">Input Checkbox Label:</label></td>
+                    <td><input type="checkbox" id="inputcheckbox" name="inputcheckbox" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputcheckbox"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputcheckbox"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputcolor">Input Color Label:</label></td>
+                    <td><input type="color" id="inputcolor" name="inputcolor" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputcolor"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputcolor"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputdate">Input Date Label:</label></td>
+                    <td><input type="date" id="inputdate" name="inputdate" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputdate"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputdate"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputdatetime">Input DateTime Label:</label></td>
+                    <td><input type="datetime-local" id="inputdatetime" name="inputdatetime" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputdatetime"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputdatetime"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputemail">Input Email Label:</label></td>
+                    <td><input type="email" id="inputemail" name="inputemail" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputemail"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputemail"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputfile">Input File Label:</label></td>
+                    <td><input type="file" id="inputfile" name="inputfile" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputfile"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputfile"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputhidden">Input Hidden Label:</label></td>
+                    <td><input type="hidden" id="inputhidden" name="inputhidden" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputhidden"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputhidden"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputimage">Input Image Label:</label></td>
+                    <td><input type="image" id="inputimage" name="inputimage" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputimage"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputimage"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputmonth">Input Month Label:</label></td>
+                    <td><input type="month" id="inputmonth" name="inputmonth" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputmonth"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputmonth"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputnumber">Input Number Label:</label></td>
+                    <td><input type="number" id="inputnumber" name="inputnumber" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputnumber"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputnumber"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputpassword">Input Passowrd Label:</label></td>
+                    <td><input type="password" id="inputpassword" name="inputpassword" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputpassword"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputpassword"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputradio">Input Radio Label:</label></td>
+                    <td><input type="radio" id="inputradio" name="inputradio" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputradio"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputradio"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputrange">Input Range Label:</label></td>
+                    <td><input type="range" id="inputrange" name="inputrange" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputrange"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputrange"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputreset">Input Reset Label:</label></td>
+                    <td><input type="reset" id="inputreset" name="inputreset" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputreset"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputreset"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputsearch">Input Search Label:</label></td>
+                    <td><input type="search" id="inputsearch" name="inputsearch" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputsearch"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputsearch"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputsumbit">Input Submit Label:</label></td>
+                    <td><input type="submit" id="inputsumbit" name="inputsumbit" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputsumbit"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputsumbit"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputtel">Input Tel Label:</label></td>
+                    <td><input type="tel" id="inputtel" name="inputtel" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputtel"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputtel"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputtext">Input Text Label:</label></td>
+                    <td><input type="text" id="inputtext" name="inputtext" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputtext"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputtext"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputtextro">Input Text (Readonly) Label:</label></td>
+                    <td><input type="text" id="inputtextro" name="inputtextro" readonly value="readonly" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputtextro"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputtextro"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputtextsc">Input Text (Spellcheck) Label:</label></td>
+                    <td><input type="text" id="inputtextsc" name="inputtextsc" spellcheck=false value="inputtextsc" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputtextsc"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputtextsc"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputtextph">Input Text (PlaceHolder) Label:</label></td>
+                    <td><input type="text" id="inputtextph" name="inputtextph" placeholder="Placeholder..." onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputtextph"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputtextph"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputtextreq">Input Text (Required) Label:</label></td>
+                    <td><input type="text" id="inputtextreq" name="inputtextreq" requried onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputtextreq"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputtextreq"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputtime">Input Time Label:</label></td>
+                    <td><input type="time" id="inputtime" name="inputtime" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputtime"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputtime"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputurl">Input URL Label:</label></td>
+                    <td><input type="url" id="inputurl" name="inputurl" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputurl"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputurl"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inputweek">Input Week Label:</label></td>
+                    <td><input type="week" id="inputweek" name="inputweek" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></td>
+                    <td>
+                        <div id="div-focus-inputweek"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-inputweek"></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="select">Select Label:</label></td>
+                    <td><select id="select" id="select" name="select" name="select" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);">
+                            <option>1</option>
+                            <option>2</option>
+                        </select></td>
+                        <td>
+                            <div id="div-focus-select"></div>
+                        </td>
+                        <td>
+                            <div id="div-value-select"></div>
+                        </td>
+                    </tr>
+                <tr>
+                    <td><label for="textarea">Textarea Label:</label></td>
+                    <td><textarea id="textarea" name="textarea" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></textarea></td>
+                    <td>
+                        <div id="div-focus-textarea"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-textarea"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="button">Button Label:</label></td>
+                    <td><button id="button" name="button" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></button></td>
+                    <td>
+                        <div id="div-focus-button"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-button"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fieldset">Fieldset Label:</label></td>
+                    <td>
+                        <fieldset id="fieldset" name="fieldset" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></fieldset>
+                    </td>
+                    <td>
+                        <div id="div-focus-fieldset"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-fieldset"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="legend">Legend Label:</label></td>
+                    <td>
+                        <legend id="legend" name="legend" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></legend>
+                    </td>
+                    <td>
+                        <div id="div-focus-legend"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-legend"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="datalist">Datalist Label:</label></td>
+                    <td><datalist id="datalist" name="datalist" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></datalist></td>
+                    <td>
+                        <div id="div-focus-datalist"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-datalist"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="output">Output Label:</label></td>
+                    <td><output id="output" name="output" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></output></td>
+                    <td>
+                        <div id="div-focus-output"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-output"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="optgroup">Optgroup Label:</label></td>
+                    <td>
+                        <optgroup id="optgroup" name="optgroup" onfocus="setFocus(this, true);" onfocusout="setFocus(this, false);"></optgroup>
+                    </td>
+                    <td>
+                        <div id="div-focus-optgroup"></div>
+                    </td>
+                    <td>
+                        <div id="div-value-optgroup"></div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
